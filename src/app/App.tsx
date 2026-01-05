@@ -469,7 +469,7 @@ function App() {
                 </div>
                 <h3 className="mb-2">Email</h3>
                 <a
-                  href="mailto:alex.johnson@example.com"
+                  href="mailto:ryanannda@gmail.com"
                   className="text-muted-foreground hover:text-green-600 dark:hover:text-green-400 transition-colors"
                 >
                   ryanannda@gmail.com
