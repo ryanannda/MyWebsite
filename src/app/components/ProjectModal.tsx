@@ -46,7 +46,7 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
             </button>
 
             {/* Full-size Image */}
-            <div className="relative w-full h-96 bg-muted">
+            <div className="relative w-full h-full bg-muted">
               <ImageWithFallback
                 src={project.image}
                 alt={project.title}
