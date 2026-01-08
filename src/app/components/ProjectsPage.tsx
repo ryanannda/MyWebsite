@@ -22,18 +22,18 @@ interface ProjectsPageProps {
 }
 
 const allProjects: Project[] = [
+  // {
+  //   id: 1,
+  //   title: 'E-Commerce Platform',
+  //   description: 'A full-stack e-commerce solution with payment integration',
+  //   image: 'https://images.unsplash.com/photo-1677469684112-5dfb3aa4d3df?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjB3ZWIlMjBkZXNpZ258ZW58MXx8fHwxNzY3NTYzMDMxfDA&ixlib=rb-4.1.0&q=80&w=1080',
+  //   technologies: ['React', 'Node.js', 'MongoDB', 'Stripe'],
+  //   link: 'https://example.com',
+  //   github: 'https://github.com',
+  //   details: 'A comprehensive e-commerce platform featuring user authentication, product management, shopping cart functionality, and secure payment processing. Built with modern technologies to ensure scalability and performance.',
+  // },
   {
     id: 1,
-    title: 'E-Commerce Platform',
-    description: 'A full-stack e-commerce solution with payment integration',
-    image: 'https://images.unsplash.com/photo-1677469684112-5dfb3aa4d3df?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjB3ZWIlMjBkZXNpZ258ZW58MXx8fHwxNzY3NTYzMDMxfDA&ixlib=rb-4.1.0&q=80&w=1080',
-    technologies: ['React', 'Node.js', 'MongoDB', 'Stripe'],
-    link: 'https://example.com',
-    github: 'https://github.com',
-    details: 'A comprehensive e-commerce platform featuring user authentication, product management, shopping cart functionality, and secure payment processing. Built with modern technologies to ensure scalability and performance.',
-  },
-  {
-    id: 2,
     title: 'Certificate Course Data Analytics',
     description: 'Mini Course RevoU - Intro to Data Analytics',
     image: 'img/serti1.png',
@@ -41,7 +41,7 @@ const allProjects: Project[] = [
     details: 'Introduction to Data Analyst roles and commonly used tools, Steps for analyzing data and presenting insights, Data cleaning and visualization using Google Sheets and Looker Studio.',
   },
   {
-    id: 3,
+    id: 2,
     title: 'Certificate Course Frontend Web Development',
     description: 'My Skill Short Class - Frontend in Website Development',
     image: 'img/serti2.png',
@@ -49,7 +49,7 @@ const allProjects: Project[] = [
     details: 'Built simple static website with forms using HTML, CSS, and JavaScript.',
   },
   {
-    id: 4,
+    id: 3,
     title: 'Certificate Course UI/UX Design',
     description: 'My Skill Short Class - Design System in UI Design',
     image: 'img/serti3.png',
