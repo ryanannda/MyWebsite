@@ -10,7 +10,7 @@ interface Project {
   technologies: string[];
   link?: string;
   github?: string;
-  details: string;
+  details: string[];
 }
 
 interface ProjectModalProps {
@@ -61,7 +61,13 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
 
               <div className="mb-6">
                 <h3 className="mb-3">Project Details</h3>
-                <p className="text-foreground/80 leading-relaxed">{project.details}</p>
+                <ul className="list-disc pl-5 space-y-2 text-foreground/80">
+                {project.details.map((detail, index) => (
+                  <li key={index} className="leading-relaxed">
+                    {detail}
+                  </li>
+                ))}
+              </ul>
               </div>
 
               <div className="mb-6">

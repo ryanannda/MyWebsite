@@ -30,33 +30,51 @@ interface Project {
   technologies: string[];
   link?: string;
   github?: string;
-  details: string;
+  details: string[];
 }
 
 const projects: Project[] = [
   {
     id: 1,
+    title: 'Assembling a Personal Computer',
+    description: 'Assemble every part of the computer starting from installing the processor to the motherboard, installing RAM, AIO CPU Fan Cooling, GPU, PSU, and neat cable management.',
+    image: 'img/rakitpc1.png',
+    technologies: ['Hardware Computer'],
+    details: [
+      'Processor: i5-12400F',
+      'Motherboard: ASRock B660M Pro RS',
+      'RAM: Team Create Classic 2x8GB 3200MHz',
+      'GPU: Zotac RTX 4060 Ti 8GB',
+      'PSU: Adata Pylon 650W 80+ Bronze',
+      'SSD: M.2 NVME Team Group MP33 Gen 3x4 512GB',
+      'Case: VenomRX Free Sky',
+      'Fan: Segotep HB-12 120mm x7 (4 Reverse, 3 Exhaust)',
+      'Fan CPU: Aigo DarkFlash 240mm'
+    ],
+  },
+  {
+    id: 2,
     title: 'Certificate Course Data Analytics',
     description: 'Mini Course RevoU - Intro to Data Analytics',
     image: 'img/serti1.png',
     technologies: ['Microsoft Excel','Google Sheets', 'Looker Studio',],
-    details: 'Introduction to Data Analyst roles and commonly used tools, Steps for analyzing data and presenting insights, Data cleaning and visualization using Google Sheets and Looker Studio.',
+    details: ['Introduction to Data Analyst roles and commonly used tools, Steps for analyzing data and presenting insights, Data cleaning and visualization using Google Sheets and Looker Studio.'],
   },
   {
-    id: 2,
+    id: 3,
     title: 'Certificate Course Frontend Web Development',
     description: 'My Skill Short Class - Frontend in Website Development',
     image: 'img/serti2.png',
     technologies: ['HTML', 'CSS','JavaScript', 'VSCode'],
-    details: 'Built simple static website with forms using HTML, CSS, and JavaScript.',
+    details: ['Built simple static website with forms using HTML, CSS, and JavaScript.'],
   },
   {
-    id: 3,
+    id: 4,
     title: 'Certificate Course UI/UX Design',
     description: 'My Skill Short Class - Design System in UI Design',
     image: 'img/serti3.png',
     technologies: ['Figma', 'Canva'],
-    details: 'Designed user interface layouts for website pages.',
+    details: ['Designed user interface layouts for website pages.'],
   },
 ];
 
@@ -211,6 +229,10 @@ function App() {
                   </div>
                   <div className="flex gap-3">
                     <span className="text-green-600 dark:text-green-400">Education:</span>
+                    <span className="text-foreground">Indrapsta PGRI University (UNINDRA), East Jakarta - Indonesia</span>
+                  </div>
+                  <div className="flex gap-3">
+                    <span className="text-green-600 dark:text-green-400">Major:</span>
                     <span className="text-foreground">B.S. Computer Science, Informatics Engineering</span>
                   </div>
                 </div>
@@ -268,8 +290,122 @@ function App() {
         </div>
       </section>
 
+      {/* Experience Section */}
+<section id="experience" className="py-20 px-4 sm:px-6 lg:px-8 bg-muted/30">
+  <div className="max-w-7xl mx-auto">
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      viewport={{ once: true }}
+    >
+      <h2 className="mb-4 text-center">My Experience</h2>
+      <div className="w-20 h-1 bg-green-600 mx-auto mb-12"></div>
+
+      <div className="space-y-6 max-w-5xl mx-auto">
+
+        {/* Experience 1 */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+          viewport={{ once: true }}
+          className="bg-background border border-border rounded-lg p-6"
+        >
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+            <div>
+              <h3 className="font-semibold">Personal Project Website – Portfolio</h3>
+              <p className="text-muted-foreground text-sm">
+                Personal Project
+              </p>
+            </div>
+            <span className="text-sm text-muted-foreground mt-2 md:mt-0">
+              Feb 2025 – Present
+            </span>
+          </div>
+
+          <h4 className="mb-2 text-green-600 dark:text-green-400 font-medium">
+            Key Responsibilities
+          </h4>
+          <ul className="list-disc list-inside space-y-1 text-muted-foreground">
+            <li>Designed and developed a personal portfolio website to showcase projects, skills, and experience</li>
+            <li>Built the application using React with Vite for fast and optimized development</li>
+            <li>Implemented responsive and modern UI using Tailwind CSS</li>
+            <li>Utilized Node.js for project setup, tooling, and development workflow</li>
+            <li>Managed source code using Git for version control and collaborative best practices</li>
+            <li>Deployed the portfolio website to a production environment and handled continuous updates</li>
+          </ul>
+        </motion.div>            
+
+        {/* Experience 2 */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+          className="bg-background border border-border rounded-lg p-6"
+        >
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+            <div>
+              <h3 className="font-semibold">Computer IT Support – Freelance</h3>
+              <p className="text-muted-foreground text-sm">
+                 Yayasan Indonesia Sejahtera Amanah
+              </p>
+            </div>
+            <span className="text-sm text-muted-foreground mt-2 md:mt-0">
+              Jun 2025
+            </span>
+          </div>
+
+          <h4 className="mb-2 text-green-600 dark:text-green-400 font-medium">
+            Key Responsibilities
+          </h4>
+          <ul className="list-disc list-inside space-y-1 text-muted-foreground">
+            <li>Assembled personal computers (PCs) from scratch based on client requirements.</li>
+            <li>Installed operating systems (Windows), drivers, and required software.</li>
+            <li>troubleshooting and fixing problems on the computer</li>
+          </ul>
+        </motion.div>
+
+        {/* Experience 3 */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+          className="bg-background border border-border rounded-lg p-6"
+        >
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+            <div>
+              <h3 className="font-semibold">Software Engineer – Internship</h3>
+              <p className="text-muted-foreground text-sm">
+                 Yayasan Indonesia Sejahtera Amanah
+              </p>
+            </div>
+            <span className="text-sm text-muted-foreground mt-2 md:mt-0">
+              Feb 2024 – Jul 2024
+            </span>
+          </div>
+
+          <h4 className="mb-2 text-green-600 dark:text-green-400 font-medium">
+            Key Responsibilities
+          </h4>
+          <ul className="list-disc list-inside space-y-1 text-muted-foreground">
+            <li>Coordinated with the technical team to align UI implementation with application requirements</li>
+            <li>Contributed to building application user interfaces using modern front-end practices</li>
+            <li>Implemented responsive layout adjustments for various screen sizes and devices</li>
+            <li>Developed and handled user input processing logic to ensure smooth user interactions</li>
+          </ul>
+        </motion.div>
+
+      </div>
+    </motion.div>
+  </div>
+</section>
+
+
       {/* Skills Section */}
-      <section id="skills" className="py-20 px-4 sm:px-6 lg:px-8 bg-muted/30">
+      <section id="skills" className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -355,7 +491,7 @@ function App() {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="py-20 px-4 sm:px-6 lg:px-8">
+      <section id="projects" className="py-20 px-4 sm:px-6 lg:px-8 bg-muted/30">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -417,7 +553,7 @@ function App() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 bg-muted/30">
+      <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -425,7 +561,7 @@ function App() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2 className="mb-4 text-center">Get In Touch</h2>
+            <h2 className="mb-4 text-center">Contact Me</h2>
             <div className="w-20 h-1 bg-green-600 mx-auto mb-12"></div>
 
             <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
@@ -498,7 +634,7 @@ function App() {
       </section>
 
       {/* Footer */}
-      <footer className="py-8 px-4 sm:px-6 lg:px-8 border-t border-border">
+      <footer className="py-8 px-4 sm:px-6 lg:px-8  bg-muted/90">
         <div className="max-w-7xl mx-auto">
           <div className="text-center text-muted-foreground">
             <p>© {new Date().getFullYear()} Riyan Ananda Pradipta. All rights reserved.</p>

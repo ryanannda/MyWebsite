@@ -12,7 +12,7 @@ interface Project {
   technologies: string[];
   link?: string;
   github?: string;
-  details: string;
+  details: string[];
 }
 
 interface ProjectsPageProps {
@@ -20,6 +20,7 @@ interface ProjectsPageProps {
   theme: 'light' | 'dark';
   toggleTheme: () => void;
 }
+
 
 const allProjects: Project[] = [
   // {
@@ -34,27 +35,45 @@ const allProjects: Project[] = [
   // },
   {
     id: 1,
+    title: 'Assembling a Personal Computer',
+    description: 'Assemble every part of the computer starting from installing the processor to the motherboard, installing RAM, AIO CPU Fan Cooling, GPU, PSU, and neat cable management.',
+    image: 'img/rakitpc1.png',
+    technologies: ['Hardware Computer'],
+    details: [
+      'Processor: i5-12400F',
+      'Motherboard: ASRock B660M Pro RS',
+      'RAM: Team Create Classic 2x8GB 3200MHz',
+      'GPU: Zotac RTX 4060 Ti 8GB',
+      'PSU: Adata Pylon 650W 80+ Bronze',
+      'SSD: M.2 NVME Team Group MP33 Gen 3x4 512GB',
+      'Case: VenomRX Free Sky',
+      'Fan: Segotep HB-12 120mm x7 (4 Reverse, 3 Exhaust)',
+      'Fan CPU: Aigo DarkFlash 240mm'
+    ],
+  },
+  {
+    id: 2,
     title: 'Certificate Course Data Analytics',
     description: 'Mini Course RevoU - Intro to Data Analytics',
     image: 'img/serti1.png',
     technologies: ['Microsoft Excel','Google Sheets', 'Looker Studio',],
-    details: 'Introduction to Data Analyst roles and commonly used tools, Steps for analyzing data and presenting insights, Data cleaning and visualization using Google Sheets and Looker Studio.',
+    details: ['Introduction to Data Analyst roles and commonly used tools, Steps for analyzing data and presenting insights, Data cleaning and visualization using Google Sheets and Looker Studio.'],
   },
   {
-    id: 2,
+    id: 3,
     title: 'Certificate Course Frontend Web Development',
     description: 'My Skill Short Class - Frontend in Website Development',
     image: 'img/serti2.png',
     technologies: ['HTML', 'CSS','JavaScript', 'VSCode'],
-    details: 'Built simple static website with forms using HTML, CSS, and JavaScript.',
+    details: ['Built simple static website with forms using HTML, CSS, and JavaScript.'],
   },
   {
-    id: 3,
+    id: 4,
     title: 'Certificate Course UI/UX Design',
     description: 'My Skill Short Class - Design System in UI Design',
     image: 'img/serti3.png',
     technologies: ['Figma', 'Canva'],
-    details: 'Designed user interface layouts for website pages.',
+    details: ['Designed user interface layouts for website pages.'],
   },
 ];
 

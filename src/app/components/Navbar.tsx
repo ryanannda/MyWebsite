@@ -57,6 +57,12 @@ export function Navbar({ theme, toggleTheme }: NavbarProps) {
               About
             </button>
             <button
+              onClick={() => scrollToSection('experience')}
+              className="text-foreground/70 hover:text-green-600 dark:hover:text-green-400 transition-colors"
+            >
+              Experience
+            </button>
+            <button
               onClick={() => scrollToSection('skills')}
               className="text-foreground/70 hover:text-green-600 dark:hover:text-green-400 transition-colors"
             >
