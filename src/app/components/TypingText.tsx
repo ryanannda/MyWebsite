@@ -15,7 +15,6 @@ export default function TypingText() {
   useEffect(() => {
     const currentText = roles[index];
 
-    // speed typing
     const speed = isDeleting ? 50 : 120;
 
     const timeout = setTimeout(() => {

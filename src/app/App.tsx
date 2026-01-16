@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
-import { motion } from 'motion/react';
+import { useState, useEffect } from "react";
+import { motion } from "motion/react";
 import {
   Database,
   Layout,
@@ -14,12 +14,12 @@ import {
   Linkedin,
   Github,
   GraduationCap,
-} from 'lucide-react';
-import { Navbar } from './components/Navbar';
-import { ProjectsPage } from './components/ProjectsPage';
-import { ProjectModal } from './components/ProjectModal';
-import { ImageWithFallback } from './components/fallback/ImageWithFallback';
-import { Button } from './components/ui/button';
+} from "lucide-react";
+import { Navbar } from "./components/Navbar";
+import { ProjectsPage } from "./components/ProjectsPage";
+import { ProjectModal } from "./components/ProjectModal";
+import { ImageWithFallback } from "./components/fallback/ImageWithFallback";
+import { Button } from "./components/ui/button";
 import TypingText from "./components/TypingText";
 
 interface Project {
@@ -36,66 +36,91 @@ interface Project {
 const projects: Project[] = [
   {
     id: 1,
-    title: 'Assembling a Personal Computer',
-    description: 'Assemble every part of the computer starting from installing the processor to the motherboard, installing RAM, AIO CPU Fan Cooling, GPU, PSU, and neat cable management.',
-    image: 'img/rakitpc1.png',
-    technologies: ['Hardware Computer'],
+    title: "Installing Arch Linux",
+    description: "Installing Arch Linux using ArchInstall",
+    image: "img/archlinux.jpg",
+    technologies: ["Linux", "Operating System", "Arch Linux", "Hyprland"],
     details: [
-      'Processor: i5-12400F',
-      'Motherboard: ASRock B660M Pro RS',
-      'RAM: Team Create Classic 2x8GB 3200MHz',
-      'GPU: Zotac RTX 4060 Ti 8GB',
-      'PSU: Adata Pylon 650W 80+ Bronze',
-      'SSD: M.2 NVME Team Group MP33 Gen 3x4 512GB',
-      'Case: VenomRX Free Sky',
-      'Fan: Segotep HB-12 120mm x7 (4 Reverse, 3 Exhaust)',
-      'Fan CPU: Aigo DarkFlash 240mm'
+      "Installing Arch Linux using Arch Install, and using Hyprland as the windows manager",
     ],
   },
+
   {
     id: 2,
-    title: 'Certificate Course Data Analytics',
-    description: 'Mini Course RevoU - Intro to Data Analytics',
-    image: 'img/serti1.png',
-    technologies: ['Microsoft Excel','Google Sheets', 'Looker Studio',],
-    details: ['Introduction to Data Analyst roles and commonly used tools, Steps for analyzing data and presenting insights, Data cleaning and visualization using Google Sheets and Looker Studio.'],
+    title: "Geometri Dash Hand Gesture",
+    description:
+      "Endless runner game controlled by real-time hand gestures using MediaPipe Hands and webcam ",
+    image: "img/gmetri.png",
+    technologies: ["Javascript", "MediaPipe", "HTML", "WebcamAPI", "CSS"],
+    details: [
+      "GMetri Dash – Hand Control is a browser-based endless runner game inspired by Geometry Dash, but with a twist: You control the game using real hand gestures via your webcam. Jump, dodge obstacles, and restart the game using simple hand movements powered by MediaPipe Hands.",
+    ],
+    link: "https://gmetri.ryanannda.my.id/",
+    github: "https://github.com/ryanannda/Geometri-Dash-Hand-Gesture",
   },
-  {
-    id: 3,
-    title: 'Certificate Course Frontend Web Development',
-    description: 'My Skill Short Class - Frontend in Website Development',
-    image: 'img/serti2.png',
-    technologies: ['HTML', 'CSS','JavaScript', 'VSCode'],
-    details: ['Built simple static website with forms using HTML, CSS, and JavaScript.'],
-  },
-  {
-    id: 4,
-    title: 'Certificate Course UI/UX Design',
-    description: 'My Skill Short Class - Design System in UI Design',
-    image: 'img/serti3.png',
-    technologies: ['Figma', 'Canva'],
-    details: ['Designed user interface layouts for website pages.'],
-  },
+
+  // {
+  //   id: 2,
+  //   title: 'Assembling a Personal Computer',
+  //   description: 'Assemble every part of the computer starting from installing the processor to the motherboard, installing RAM, AIO CPU Fan Cooling, GPU, PSU, and neat cable management.',
+  //   image: 'img/rakitpc1.png',
+  //   technologies: ['Hardware Computer'],
+  //   details: [
+  //     'Processor: i5-12400F',
+  //     'Motherboard: ASRock B660M Pro RS',
+  //     'RAM: Team Create Classic 2x8GB 3200MHz',
+  //     'GPU: Zotac RTX 4060 Ti 8GB',
+  //     'PSU: Adata Pylon 650W 80+ Bronze',
+  //     'SSD: M.2 NVME Team Group MP33 Gen 3x4 512GB',
+  //     'Case: VenomRX Free Sky',
+  //     'Fan: Segotep HB-12 120mm x7 (4 Reverse, 3 Exhaust)',
+  //     'Fan CPU: Aigo DarkFlash 240mm'
+  //   ],
+  // },
+  // {
+  //   id: 3,
+  //   title: 'Certificate Course Data Analytics',
+  //   description: 'Mini Course RevoU - Intro to Data Analytics',
+  //   image: 'img/serti1.png',
+  //   technologies: ['Microsoft Excel','Google Sheets', 'Looker Studio',],
+  //   details: ['Introduction to Data Analyst roles and commonly used tools, Steps for analyzing data and presenting insights, Data cleaning and visualization using Google Sheets and Looker Studio.'],
+  // },
+  // {
+  //   id: 4,
+  //   title: 'Certificate Course Frontend Web Development',
+  //   description: 'My Skill Short Class - Frontend in Website Development',
+  //   image: 'img/serti2.png',
+  //   technologies: ['HTML', 'CSS','JavaScript', 'VSCode'],
+  //   details: ['Built simple static website with forms using HTML, CSS, and JavaScript.'],
+  // },
+  // {
+  //   id: 5,
+  //   title: 'Certificate Course UI/UX Design',
+  //   description: 'My Skill Short Class - Design System in UI Design',
+  //   image: 'img/serti3.png',
+  //   technologies: ['Figma', 'Canva'],
+  //   details: ['Designed user interface layouts for website pages.'],
+  // },
 ];
 
 const skills = [
-  { name: 'Web Development', icon: Layout, level: 85 },
-  { name: 'Hardware & Software Computer', icon: Monitor, level: 95 },
-  { name: 'Network', icon: Network, level: 80 },
-  { name: 'Office', icon: Database, level: 85 },
+  { name: "Web Development", icon: Layout, level: 85 },
+  { name: "Hardware & Software Computer", icon: Monitor, level: 95 },
+  { name: "Network", icon: Network, level: 80 },
+  { name: "Office", icon: Database, level: 85 },
 ];
 
 function App() {
-  const [theme, setTheme] = useState<'light' | 'dark'>('light');
+  const [theme, setTheme] = useState<"light" | "dark">("light");
   const [showProjectsPage, setShowProjectsPage] = useState(false);
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   useEffect(() => {
-    document.documentElement.classList.toggle('dark', theme === 'dark');
+    document.documentElement.classList.toggle("dark", theme === "dark");
   }, [theme]);
 
   const toggleTheme = () => {
-    setTheme((prev) => (prev === 'light' ? 'dark' : 'light'));
+    setTheme((prev) => (prev === "light" ? "dark" : "light"));
   };
 
   if (showProjectsPage) {
@@ -122,18 +147,25 @@ function App() {
               transition={{ duration: 0.6 }}
             >
               <h1 className="text-4xl mb-6">
-                Hi, I'm{' '}
-                <span className="text-green-600 dark:text-green-400">Riyan Ananda Pradipta</span>
+                Hi, I'm{" "}
+                <span className="text-green-600 dark:text-green-400">
+                  Riyan Ananda Pradipta
+                </span>
               </h1>
-              <h2 className="mb-4 text-foreground/80"><TypingText /></h2>
+              <h2 className="mb-4 text-foreground/80">
+                <TypingText />
+              </h2>
               <p className="text-muted-foreground mb-8">
-                I have expertise in building technology-based digital solutions with experience in more than 10+ projects, 
-                with a focus on efficiency, scalability, and continuous improvement.
+                I have expertise in building technology-based digital solutions
+                with experience in more than 10+ projects, with a focus on
+                efficiency, scalability, and continuous improvement.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Button
                   onClick={() =>
-                    document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })
+                    document
+                      .getElementById("projects")
+                      ?.scrollIntoView({ behavior: "smooth" })
                   }
                   className="bg-green-600 hover:bg-green-700 text-white"
                 >
@@ -143,8 +175,8 @@ function App() {
                 <button
                   onClick={() => {
                     const link = document.createElement("a");
-                    link.href = "/cv/CV.pdf";
-                    link.download = "CV.pdf";
+                    link.href = "/cv/CV_Riyan-Ananda-Pradipta.pdf";
+                    link.download = "CV_Riyan-Ananda-Pradipta.pdf";
                     link.click();
                   }}
                   className="px-4 py-1 rounded-sm border font-semibold transition text-sm
@@ -153,8 +185,6 @@ function App() {
                 >
                   Download CV
                 </button>
-
-
               </div>
             </motion.div>
             <motion.div
@@ -164,18 +194,20 @@ function App() {
               className="relative"
             >
               <div className="relative flex items-center justify-center">
-                {/* NEON GLOW BACKLIGHT */}
-                <div className="absolute
-               w-[380px] h-[380px] md:w-[410px] md:h-[410px]
-               rounded-full bg-primary/55 blur-3xl
-               animate-soft-glow
-               top-1/2 left-1/2
-               -translate-x-1/2 -translate-y-1/2
-               z-0"></div>
+                <div
+                  className="absolute
+                  w-[380px] h-[380px] md:w-[410px] md:h-[410px]
+                  rounded-full bg-primary/55 blur-3xl
+                  animate-soft-glow
+                  top-1/2 left-1/2
+                  -translate-x-1/2 -translate-y-1/2
+                  z-0"
+                ></div>
 
-                {/* MAIN PHOTO */}
-                <div className="relative w-80 h-80 md:w-[420px] md:h-[420px] rounded-full 
-                                border-[6px] border-primary shadow-xl overflow-hidden z-10">
+                <div
+                  className="relative w-80 h-80 md:w-[420px] md:h-[420px] rounded-full 
+                                border-[6px] border-primary shadow-xl overflow-hidden z-10"
+                >
                   <img
                     src="/img/pfp.jpg"
                     alt="Profile"
@@ -212,34 +244,55 @@ function App() {
                 <h3 className="mb-4">Personal Details</h3>
                 <div className="space-y-4">
                   <div className="flex gap-3">
-                    <span className="text-green-600 dark:text-green-400">Name:</span>
-                    <span className="text-foreground">Riyan Ananda Pradipta</span>
+                    <span className="text-green-600 dark:text-green-400">
+                      Name:
+                    </span>
+                    <span className="text-foreground">
+                      Riyan Ananda Pradipta
+                    </span>
                   </div>
                   <div className="flex gap-3">
-                    <span className="text-green-600 dark:text-green-400">Date of Birth:</span>
+                    <span className="text-green-600 dark:text-green-400">
+                      Date of Birth:
+                    </span>
                     <span className="text-foreground">September 15, 2002</span>
                   </div>
                   <div className="flex gap-3">
-                    <span className="text-green-600 dark:text-green-400">Email:</span>
+                    <span className="text-green-600 dark:text-green-400">
+                      Email:
+                    </span>
                     <span className="text-foreground">ryanannda@gmail.com</span>
                   </div>
                   <div className="flex gap-3">
-                    <span className="text-green-600 dark:text-green-400">Address:</span>
+                    <span className="text-green-600 dark:text-green-400">
+                      Address:
+                    </span>
                     <span className="text-foreground">Depok, West Java</span>
                   </div>
                   <div className="flex gap-3">
-                    <span className="text-green-600 dark:text-green-400">Education:</span>
-                    <span className="text-foreground">Indrapsta PGRI University (UNINDRA), East Jakarta - Indonesia</span>
+                    <span className="text-green-600 dark:text-green-400">
+                      Education:
+                    </span>
+                    <span className="text-foreground">
+                      Indrapsta PGRI University (UNINDRA), East Jakarta -
+                      Indonesia
+                    </span>
                   </div>
                   <div className="flex gap-3">
-                    <span className="text-green-600 dark:text-green-400">Major:</span>
-                    <span className="text-foreground">B.S. Computer Science, Informatics Engineering</span>
+                    <span className="text-green-600 dark:text-green-400">
+                      Major:
+                    </span>
+                    <span className="text-foreground">
+                      B.S. Computer Science, Informatics Engineering
+                    </span>
                   </div>
                 </div>
                 <p className="text-muted-foreground mt-6 leading-relaxed">
-                  A Computer Engineering graduate with skills in Web Development and advanced knowledge of computer systems, 
-                  Experienced in developing web applications, managing databases, and utilizing Microsoft Office. 
-                  Highly adaptable to new technologies with a strong enthusiasm for continuous learning.
+                  A Computer Engineering graduate with skills in Web Development
+                  and advanced knowledge of computer systems, Experienced in
+                  developing web applications, managing databases, and utilizing
+                  Microsoft Office. Highly adaptable to new technologies with a
+                  strong enthusiasm for continuous learning.
                 </p>
               </div>
             </div>
@@ -291,118 +344,159 @@ function App() {
       </section>
 
       {/* Experience Section */}
-<section id="experience" className="py-20 px-4 sm:px-6 lg:px-8 bg-muted/30">
-  <div className="max-w-7xl mx-auto">
-    <motion.div
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
-      viewport={{ once: true }}
-    >
-      <h2 className="mb-4 text-center">My Experience</h2>
-      <div className="w-20 h-1 bg-green-600 mx-auto mb-12"></div>
+      <section
+        id="experience"
+        className="py-20 px-4 sm:px-6 lg:px-8 bg-muted/30"
+      >
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="mb-4 text-center">My Experience</h2>
+            <div className="w-20 h-1 bg-green-600 mx-auto mb-12"></div>
 
-      <div className="space-y-6 max-w-5xl mx-auto">
+            <div className="space-y-6 max-w-5xl mx-auto">
+              {/* Experience 1 */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+                className="bg-background border border-border rounded-lg p-6"
+              >
+                <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                  <div>
+                    <h3 className="font-semibold">
+                      Personal Project Website – Portfolio
+                    </h3>
+                    <p className="text-muted-foreground text-sm">
+                      Personal Project
+                    </p>
+                  </div>
+                  <span className="text-sm text-muted-foreground mt-2 md:mt-0">
+                    Feb 2025 – Present
+                  </span>
+                </div>
 
-        {/* Experience 1 */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.1 }}
-          viewport={{ once: true }}
-          className="bg-background border border-border rounded-lg p-6"
-        >
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-            <div>
-              <h3 className="font-semibold">Personal Project Website – Portfolio</h3>
-              <p className="text-muted-foreground text-sm">
-                Personal Project
-              </p>
+                <h4 className="mb-2 text-green-600 dark:text-green-400 font-medium">
+                  Key Responsibilities
+                </h4>
+                <ul className="list-disc list-inside space-y-1 text-muted-foreground">
+                  <li>
+                    Designed and developed a personal portfolio website to
+                    showcase projects, skills, and experience
+                  </li>
+                  <li>
+                    Built the application using React with Vite for fast and
+                    optimized development
+                  </li>
+                  <li>
+                    Implemented responsive and modern UI using Tailwind CSS
+                  </li>
+                  <li>
+                    Utilized Node.js for project setup, tooling, and development
+                    workflow
+                  </li>
+                  <li>
+                    Managed source code using Git for version control and
+                    collaborative best practices
+                  </li>
+                  <li>
+                    Deployed the portfolio website to a production environment
+                    and handled continuous updates
+                  </li>
+                </ul>
+              </motion.div>
+
+              {/* Experience 2 */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+                className="bg-background border border-border rounded-lg p-6"
+              >
+                <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                  <div>
+                    <h3 className="font-semibold">
+                      Computer IT Support – Freelance
+                    </h3>
+                    <p className="text-muted-foreground text-sm">
+                      Yayasan Indonesia Sejahtera Amanah
+                    </p>
+                  </div>
+                  <span className="text-sm text-muted-foreground mt-2 md:mt-0">
+                    Jun 2025
+                  </span>
+                </div>
+
+                <h4 className="mb-2 text-green-600 dark:text-green-400 font-medium">
+                  Key Responsibilities
+                </h4>
+                <ul className="list-disc list-inside space-y-1 text-muted-foreground">
+                  <li>
+                    Assembled personal computers (PCs) from scratch based on
+                    client requirements.
+                  </li>
+                  <li>
+                    Installed operating systems (Windows), drivers, and required
+                    software.
+                  </li>
+                  <li>troubleshooting and fixing problems on the computer</li>
+                </ul>
+              </motion.div>
+
+              {/* Experience 3 */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+                className="bg-background border border-border rounded-lg p-6"
+              >
+                <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                  <div>
+                    <h3 className="font-semibold">
+                      Software Engineer – Internship
+                    </h3>
+                    <p className="text-muted-foreground text-sm">
+                      Yayasan Indonesia Sejahtera Amanah
+                    </p>
+                  </div>
+                  <span className="text-sm text-muted-foreground mt-2 md:mt-0">
+                    Feb 2024 – Jul 2024
+                  </span>
+                </div>
+
+                <h4 className="mb-2 text-green-600 dark:text-green-400 font-medium">
+                  Key Responsibilities
+                </h4>
+                <ul className="list-disc list-inside space-y-1 text-muted-foreground">
+                  <li>
+                    Coordinated with the technical team to align UI
+                    implementation with application requirements
+                  </li>
+                  <li>
+                    Contributed to building application user interfaces using
+                    modern front-end practices
+                  </li>
+                  <li>
+                    Implemented responsive layout adjustments for various screen
+                    sizes and devices
+                  </li>
+                  <li>
+                    Developed and handled user input processing logic to ensure
+                    smooth user interactions
+                  </li>
+                </ul>
+              </motion.div>
             </div>
-            <span className="text-sm text-muted-foreground mt-2 md:mt-0">
-              Feb 2025 – Present
-            </span>
-          </div>
-
-          <h4 className="mb-2 text-green-600 dark:text-green-400 font-medium">
-            Key Responsibilities
-          </h4>
-          <ul className="list-disc list-inside space-y-1 text-muted-foreground">
-            <li>Designed and developed a personal portfolio website to showcase projects, skills, and experience</li>
-            <li>Built the application using React with Vite for fast and optimized development</li>
-            <li>Implemented responsive and modern UI using Tailwind CSS</li>
-            <li>Utilized Node.js for project setup, tooling, and development workflow</li>
-            <li>Managed source code using Git for version control and collaborative best practices</li>
-            <li>Deployed the portfolio website to a production environment and handled continuous updates</li>
-          </ul>
-        </motion.div>            
-
-        {/* Experience 2 */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
-          className="bg-background border border-border rounded-lg p-6"
-        >
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-            <div>
-              <h3 className="font-semibold">Computer IT Support – Freelance</h3>
-              <p className="text-muted-foreground text-sm">
-                 Yayasan Indonesia Sejahtera Amanah
-              </p>
-            </div>
-            <span className="text-sm text-muted-foreground mt-2 md:mt-0">
-              Jun 2025
-            </span>
-          </div>
-
-          <h4 className="mb-2 text-green-600 dark:text-green-400 font-medium">
-            Key Responsibilities
-          </h4>
-          <ul className="list-disc list-inside space-y-1 text-muted-foreground">
-            <li>Assembled personal computers (PCs) from scratch based on client requirements.</li>
-            <li>Installed operating systems (Windows), drivers, and required software.</li>
-            <li>troubleshooting and fixing problems on the computer</li>
-          </ul>
-        </motion.div>
-
-        {/* Experience 3 */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
-          className="bg-background border border-border rounded-lg p-6"
-        >
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-            <div>
-              <h3 className="font-semibold">Software Engineer – Internship</h3>
-              <p className="text-muted-foreground text-sm">
-                 Yayasan Indonesia Sejahtera Amanah
-              </p>
-            </div>
-            <span className="text-sm text-muted-foreground mt-2 md:mt-0">
-              Feb 2024 – Jul 2024
-            </span>
-          </div>
-
-          <h4 className="mb-2 text-green-600 dark:text-green-400 font-medium">
-            Key Responsibilities
-          </h4>
-          <ul className="list-disc list-inside space-y-1 text-muted-foreground">
-            <li>Coordinated with the technical team to align UI implementation with application requirements</li>
-            <li>Contributed to building application user interfaces using modern front-end practices</li>
-            <li>Implemented responsive layout adjustments for various screen sizes and devices</li>
-            <li>Developed and handled user input processing logic to ensure smooth user interactions</li>
-          </ul>
-        </motion.div>
-
-      </div>
-    </motion.div>
-  </div>
-</section>
-
+          </motion.div>
+        </div>
+      </section>
 
       {/* Skills Section */}
       <section id="skills" className="py-20 px-4 sm:px-6 lg:px-8">
@@ -442,7 +536,9 @@ function App() {
                             className="h-full bg-green-600"
                           />
                         </div>
-                        <span className="text-green-600 dark:text-green-400">{skill.level}%</span>
+                        <span className="text-green-600 dark:text-green-400">
+                          {skill.level}%
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -454,24 +550,24 @@ function App() {
               <h3 className="mb-6 text-center">Technologies I Work With</h3>
               <div className="flex flex-wrap justify-center gap-3">
                 {[
-                  'React',
-                  'Node.js',
-                  'Next.js',
-                  'Tailwind CSS',
-                  'MySQL',
-                  'PostgreSQL',
-                  'Git',
-                  'Figma',
-                  'Canva/Photoshop',
-                  'Operating Systems',
-                  'Hardware Troubleshooting',
-                  'Windows/Linux',
-                  'LAN',
-                  'DNS/VPN',
-                  'Router Config',
-                  'Microsoft Word',
-                  'Microsoft Excel',
-                  'Microsoft PowerPoint',
+                  "React",
+                  "Node.js",
+                  "Next.js",
+                  "Tailwind CSS",
+                  "MySQL",
+                  "PostgreSQL",
+                  "Git",
+                  "Figma",
+                  "Canva/Photoshop",
+                  "Operating Systems",
+                  "Hardware Troubleshooting",
+                  "Windows/Linux",
+                  "LAN",
+                  "DNS/VPN",
+                  "Router Config",
+                  "Microsoft Word",
+                  "Microsoft Excel",
+                  "Microsoft PowerPoint",
                 ].map((tech, index) => (
                   <motion.span
                     key={tech}
@@ -524,16 +620,20 @@ function App() {
                     <h3 className="mb-2 group-hover:text-green-600 dark:group-hover:text-green-400 transition-colors">
                       {project.title}
                     </h3>
-                    <p className="text-muted-foreground mb-4">{project.description}</p>
+                    <p className="text-muted-foreground mb-4">
+                      {project.description}
+                    </p>
                     <div className="flex flex-wrap gap-2">
-                      {project.technologies.slice(0, 3).map((tech, techIndex) => (
-                        <span
-                          key={techIndex}
-                          className="px-2 py-1 bg-green-600/10 text-green-700 dark:text-green-400 rounded"
-                        >
-                          {tech}
-                        </span>
-                      ))}
+                      {project.technologies
+                        .slice(0, 3)
+                        .map((tech, techIndex) => (
+                          <span
+                            key={techIndex}
+                            className="px-2 py-1 bg-green-600/10 text-green-700 dark:text-green-400 rounded"
+                          >
+                            {tech}
+                          </span>
+                        ))}
                     </div>
                   </div>
                 </motion.div>
@@ -607,7 +707,9 @@ function App() {
                   <MapPin className="w-8 h-8 text-green-600 dark:text-green-400" />
                 </div>
                 <h3 className="mb-2">Location</h3>
-                <p className="text-muted-foreground">Depok, West Java, Indonesia</p>
+                <p className="text-muted-foreground">
+                  Depok, West Java, Indonesia
+                </p>
               </motion.div>
             </div>
 
@@ -637,13 +739,19 @@ function App() {
       <footer className="py-8 px-4 sm:px-6 lg:px-8  bg-muted/90">
         <div className="max-w-7xl mx-auto">
           <div className="text-center text-muted-foreground">
-            <p>© {new Date().getFullYear()} Riyan Ananda Pradipta. All rights reserved.</p>
+            <p>
+              © {new Date().getFullYear()} Riyan Ananda Pradipta. All rights
+              reserved.
+            </p>
           </div>
         </div>
       </footer>
 
       {/* Project Modal */}
-      <ProjectModal project={selectedProject} onClose={() => setSelectedProject(null)} />
+      <ProjectModal
+        project={selectedProject}
+        onClose={() => setSelectedProject(null)}
+      />
     </div>
   );
 }
