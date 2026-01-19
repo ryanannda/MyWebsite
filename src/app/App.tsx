@@ -439,9 +439,7 @@ function App() {
                     <h3 className="font-semibold">
                       Computer IT Support – Freelance
                     </h3>
-                    <p className="text-muted-foreground text-sm">
-                      Yayasan Indonesia Sejahtera Amanah
-                    </p>
+                    <p className="text-muted-foreground text-sm">Client</p>
                   </div>
                   <span className="text-sm text-muted-foreground mt-2 md:mt-0">
                     Jun 2025
