@@ -34,6 +34,21 @@ const allProjects: Project[] = [
   // },
   {
     id: 1,
+    title: "Template React & TailwindCSS",
+    description:
+      "React + Tailwind CSS starter template for building modern and responsive web applications",
+    image: "img/template.png",
+    technologies: ["TypeScript", "React", "TailwindCSS", "Frontend"],
+    details: [
+      "Template React TailwindCSS is a modern and scalable frontend starter template built with React and Tailwind CSS. This project is designed to help developers quickly bootstrap clean, responsive, and maintainable user interfaces without worrying about initial setup and architecture",
+      "The template follows a modular component-based structure, making it easy to extend, customize, and reuse UI elements across different projects. It includes a collection of pre-built sections such as navigation bars, hero sections, typography showcases, tables, forms, and footers—allowing developers to focus more on product logic and user experience rather than repetitive UI work",
+      "Styling is handled using Tailwind CSS, enabling rapid design iteration with utility-first classes while maintaining consistency through shared theme variables. The project also implements a Theme Context using React Context API, providing a clean foundation for theme management (such as light/dark mode or custom color schemes)",
+    ],
+    github: "https://github.com/ryanannda/Template-React-TailwindCSS",
+  },
+
+  {
+    id: 2,
     title: "Installing Arch Linux",
     description: "Installing Arch Linux using ArchInstall",
     image: "img/archlinux.jpg",
@@ -44,7 +59,7 @@ const allProjects: Project[] = [
   },
 
   {
-    id: 2,
+    id: 3,
     title: "Geometri Dash Hand Gesture",
     description:
       "Endless runner game controlled by real-time hand gestures using MediaPipe Hands and webcam ",
