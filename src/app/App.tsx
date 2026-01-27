@@ -131,7 +131,7 @@ const projects: Project[] = [
 ];
 
 const skills = [
-  { name: "Web Development", icon: Layout, level: 85 },
+  { name: "Web Development", icon: Layout, level: 90 },
   { name: "Hardware & Software Computer", icon: Monitor, level: 95 },
   { name: "Network", icon: Network, level: 80 },
   { name: "Office", icon: Database, level: 85 },
