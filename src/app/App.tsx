@@ -51,6 +51,18 @@ const projects: Project[] = [
 
   {
     id: 2,
+    title: "Website Cargo",
+    description: "Website Global Cargo & Logistics Solutions",
+    image: "img/web_cargo.png",
+    technologies: ["TypeScript", "React", "TailwindCSS", "Frontend"],
+    details: [
+      "Professional cargo, freight forwarding, and export-import logistics services. Air, sea, and land freight with worldwide coverage, real-time tracking, and competitive rates.",
+    ],
+    link: "https://global-freight-hub.vercel.app/",
+  },
+
+  {
+    id: 3,
     title: "Installing Arch Linux",
     description: "Installing Arch Linux using ArchInstall",
     image: "img/archlinux.jpg",
@@ -61,7 +73,7 @@ const projects: Project[] = [
   },
 
   {
-    id: 3,
+    id: 4,
     title: "Geometri Dash Hand Gesture",
     description:
       "Endless runner game controlled by real-time hand gestures using MediaPipe Hands and webcam ",
