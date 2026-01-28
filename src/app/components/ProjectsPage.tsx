@@ -49,8 +49,31 @@ const allProjects: Project[] = [
 
   {
     id: 2,
-    title: "Website Cargo",
+    title: "Cleanova Home Care Website",
     description: "Website Global Cargo & Logistics Solutions",
+    image: "img/cleanova.png",
+    technologies: [
+      "HTML5",
+      "CSS3",
+      "Bootstrap 5",
+      "JavaScript",
+      "Responsive Web Design",
+      "Frontend Development",
+    ],
+    details: [
+      "Professional home and office cleaning service website for Cleanova Home Care.",
+      "Features service listings, pricing plans, team profiles, customer testimonials, and contact form.",
+      "Designed to help customers easily explore services and request cleaning appointments.",
+      "Focused on clean UI, trust-building layout, and mobile-responsive experience.",
+    ],
+    link: "https://ryanannda.github.io/Cleanova-Home-Cleaner/",
+    github: "https://github.com/ryanannda/Cleanova-Home-Cleaner",
+  },
+
+  {
+    id: 3,
+    title: "Cleanova Home Care Website",
+    description: "Website Home Cleaning & Professional Cleaning Services",
     image: "img/web_cargo.png",
     technologies: ["TypeScript", "React", "TailwindCSS", "Frontend"],
     details: [
@@ -60,7 +83,7 @@ const allProjects: Project[] = [
   },
 
   {
-    id: 3,
+    id: 4,
     title: "Installing Arch Linux",
     description: "Installing Arch Linux using ArchInstall",
     image: "img/archlinux.jpg",
@@ -71,7 +94,7 @@ const allProjects: Project[] = [
   },
 
   {
-    id: 4,
+    id: 5,
     title: "Geometri Dash Hand Gesture",
     description:
       "Endless runner game controlled by real-time hand gestures using MediaPipe Hands and webcam ",

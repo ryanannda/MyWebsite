@@ -51,8 +51,31 @@ const projects: Project[] = [
 
   {
     id: 2,
-    title: "Website Cargo",
+    title: "Cleanova Home Care Website",
     description: "Website Global Cargo & Logistics Solutions",
+    image: "img/cleanova.png",
+    technologies: [
+      "HTML5",
+      "CSS3",
+      "Bootstrap 5",
+      "JavaScript",
+      "Responsive Web Design",
+      "Frontend Development",
+    ],
+    details: [
+      "Professional home and office cleaning service website for Cleanova Home Care.",
+      "Features service listings, pricing plans, team profiles, customer testimonials, and contact form.",
+      "Designed to help customers easily explore services and request cleaning appointments.",
+      "Focused on clean UI, trust-building layout, and mobile-responsive experience.",
+    ],
+    link: "https://ryanannda.github.io/Cleanova-Home-Cleaner/",
+    github: "https://github.com/ryanannda/Cleanova-Home-Cleaner",
+  },
+
+  {
+    id: 3,
+    title: "Cleanova Home Care Website",
+    description: "Website Home Cleaning & Professional Cleaning Services",
     image: "img/web_cargo.png",
     technologies: ["TypeScript", "React", "TailwindCSS", "Frontend"],
     details: [
@@ -62,7 +85,7 @@ const projects: Project[] = [
   },
 
   {
-    id: 3,
+    id: 4,
     title: "Installing Arch Linux",
     description: "Installing Arch Linux using ArchInstall",
     image: "img/archlinux.jpg",
@@ -73,7 +96,7 @@ const projects: Project[] = [
   },
 
   {
-    id: 4,
+    id: 5,
     title: "Geometri Dash Hand Gesture",
     description:
       "Endless runner game controlled by real-time hand gestures using MediaPipe Hands and webcam ",
@@ -262,7 +285,7 @@ function App() {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="relative">
                 <ImageWithFallback
-                  src="/img/pfp.jpg"
+                  src="https://i.pinimg.com/736x/7c/71/b2/7c71b2306e6992c222bfe80c9a835a31.jpg"
                   alt="About me"
                   className="rounded-lg w-full h-96 object-cover"
                 />
