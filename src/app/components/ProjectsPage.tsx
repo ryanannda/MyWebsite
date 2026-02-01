@@ -58,7 +58,7 @@ const allProjects: Project[] = [
       "Responsive UI optimized for desktop and mobile devices",
       "Modern and clean interface built with reusable UI components",
     ],
-    link: "#",
+    link: "https://youtu.be/W3swJP6qcIA",
     github: "https://github.com/ryanannda/Blog",
   },
 
