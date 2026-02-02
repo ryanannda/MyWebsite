@@ -104,8 +104,8 @@ const projects: Project[] = [
 
   {
     id: 4,
-    title: "Cleanova Home Care Website",
-    description: "Website Home Cleaning & Professional Cleaning Services",
+    title: "Website Global Cargo",
+    description: "Modern Responsive Website Cargo",
     image: "img/web_cargo.png",
     technologies: ["TypeScript", "React", "TailwindCSS", "Frontend"],
     details: [
@@ -116,13 +116,25 @@ const projects: Project[] = [
 
   {
     id: 5,
-    title: "Installing Arch Linux",
-    description: "Installing Arch Linux using ArchInstall",
-    image: "img/archlinux.jpg",
-    technologies: ["Linux", "Operating System", "Arch Linux", "Hyprland"],
-    details: [
-      "Installing Arch Linux using Arch Install, and using Hyprland as the windows manager",
+    title: "Coffe Website",
+    description: "Responsive Desing Coffe Website (frontend-only)",
+    image: "img/coffee.png",
+    technologies: [
+      "React Vite",
+      "Typescript",
+      "TailwindCSS",
+      "Javascript",
+      "Responsive Web Design",
+      "Frontend Development",
     ],
+    details: [
+      "Professional and responsive design Coffe Website",
+      "Features Story, Menu, Gallery, Cutomer Testimonials, Location, and Contact",
+      "Created to help with online ordering without any hassle",
+      "Focused on clean UI, trust-building layout, and mobile-responsive experience.",
+    ],
+    link: "https://ryanannda.github.io/Cleanova-Home-Cleaner/",
+    github: "https://github.com/ryanannda/Cleanova-Home-Cleaner",
   },
 
   {
@@ -137,6 +149,17 @@ const projects: Project[] = [
     ],
     link: "https://gmetri.ryanannda.my.id/",
     github: "https://github.com/ryanannda/Geometri-Dash-Hand-Gesture",
+  },
+
+  {
+    id: 7,
+    title: "Installing Arch Linux",
+    description: "Installing Arch Linux using ArchInstall",
+    image: "img/archlinux.jpg",
+    technologies: ["Linux", "Operating System", "Arch Linux", "Hyprland"],
+    details: [
+      "Installing Arch Linux using Arch Install, and using Hyprland as the windows manager",
+    ],
   },
 
   // {
