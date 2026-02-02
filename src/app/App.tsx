@@ -139,71 +139,15 @@ const projects: Project[] = [
 
   {
     id: 6,
-    title: "Geometri Dash Hand Gesture",
-    description:
-      "Endless runner game controlled by real-time hand gestures using MediaPipe Hands and webcam ",
-    image: "img/gmetri.png",
-    technologies: ["Javascript", "MediaPipe", "HTML", "WebcamAPI", "CSS"],
+    title: "Mobile E-commerce Design UI/UX",
+    description: "Mobile E-commerce Design UI/UX",
+    image: "img/UiUx.png",
+    technologies: ["Figma", "Canva", "Photoshop"],
     details: [
-      "GMetri Dash – Hand Control is a browser-based endless runner game inspired by Geometry Dash, but with a twist: You control the game using real hand gestures via your webcam. Jump, dodge obstacles, and restart the game using simple hand movements powered by MediaPipe Hands.",
+      "Mobile E-commerce Design UI/UX using Figma, Canva, and Photoshop",
     ],
-    link: "https://gmetri.ryanannda.my.id/",
-    github: "https://github.com/ryanannda/Geometri-Dash-Hand-Gesture",
+    link: "https://www.figma.com/design/7EBDhEwRRAsPvplOo5DUSR/E-commercec?node-id=0-1&t=aoSmh6aPqEcQnmIy-1",
   },
-
-  {
-    id: 7,
-    title: "Installing Arch Linux",
-    description: "Installing Arch Linux using ArchInstall",
-    image: "img/archlinux.jpg",
-    technologies: ["Linux", "Operating System", "Arch Linux", "Hyprland"],
-    details: [
-      "Installing Arch Linux using Arch Install, and using Hyprland as the windows manager",
-    ],
-  },
-
-  // {
-  //   id: 2,
-  //   title: 'Assembling a Personal Computer',
-  //   description: 'Assemble every part of the computer starting from installing the processor to the motherboard, installing RAM, AIO CPU Fan Cooling, GPU, PSU, and neat cable management.',
-  //   image: 'img/rakitpc1.png',
-  //   technologies: ['Hardware Computer'],
-  //   details: [
-  //     'Processor: i5-12400F',
-  //     'Motherboard: ASRock B660M Pro RS',
-  //     'RAM: Team Create Classic 2x8GB 3200MHz',
-  //     'GPU: Zotac RTX 4060 Ti 8GB',
-  //     'PSU: Adata Pylon 650W 80+ Bronze',
-  //     'SSD: M.2 NVME Team Group MP33 Gen 3x4 512GB',
-  //     'Case: VenomRX Free Sky',
-  //     'Fan: Segotep HB-12 120mm x7 (4 Reverse, 3 Exhaust)',
-  //     'Fan CPU: Aigo DarkFlash 240mm'
-  //   ],
-  // },
-  // {
-  //   id: 3,
-  //   title: 'Certificate Course Data Analytics',
-  //   description: 'Mini Course RevoU - Intro to Data Analytics',
-  //   image: 'img/serti1.png',
-  //   technologies: ['Microsoft Excel','Google Sheets', 'Looker Studio',],
-  //   details: ['Introduction to Data Analyst roles and commonly used tools, Steps for analyzing data and presenting insights, Data cleaning and visualization using Google Sheets and Looker Studio.'],
-  // },
-  // {
-  //   id: 4,
-  //   title: 'Certificate Course Frontend Web Development',
-  //   description: 'My Skill Short Class - Frontend in Website Development',
-  //   image: 'img/serti2.png',
-  //   technologies: ['HTML', 'CSS','JavaScript', 'VSCode'],
-  //   details: ['Built simple static website with forms using HTML, CSS, and JavaScript.'],
-  // },
-  // {
-  //   id: 5,
-  //   title: 'Certificate Course UI/UX Design',
-  //   description: 'My Skill Short Class - Design System in UI Design',
-  //   image: 'img/serti3.png',
-  //   technologies: ['Figma', 'Canva'],
-  //   details: ['Designed user interface layouts for website pages.'],
-  // },
 ];
 
 const skills = [
