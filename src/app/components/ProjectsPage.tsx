@@ -131,8 +131,8 @@ const allProjects: Project[] = [
       "Created to help with online ordering without any hassle",
       "Focused on clean UI, trust-building layout, and mobile-responsive experience.",
     ],
-    link: "https://ryanannda.github.io/Cleanova-Home-Cleaner/",
-    github: "https://github.com/ryanannda/Cleanova-Home-Cleaner",
+    link: "https://coffeewebsite-topaz.vercel.app/",
+    github: "https://github.com/ryanannda/Responsivecoffeewebsite",
   },
 
   {
