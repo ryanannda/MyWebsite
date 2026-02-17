@@ -424,7 +424,7 @@ function App() {
                     </p>
                   </div>
                   <span className="text-sm text-muted-foreground mt-2 md:mt-0">
-                    Feb 2025 – Present
+                    Nov 2025 – Present
                   </span>
                 </div>
 
@@ -474,7 +474,7 @@ function App() {
                     <p className="text-muted-foreground text-sm">Client</p>
                   </div>
                   <span className="text-sm text-muted-foreground mt-2 md:mt-0">
-                    Jun 2025
+                    Jun 2025 - Sept 2025
                   </span>
                 </div>
 
@@ -483,14 +483,22 @@ function App() {
                 </h4>
                 <ul className="list-disc list-inside space-y-1 text-muted-foreground">
                   <li>
-                    Assembled personal computers (PCs) from scratch based on
-                    client requirements.
+                    Provides computer installation, configuration, and
+                    maintenance services for several clients.{" "}
                   </li>
                   <li>
-                    Installed operating systems (Windows), drivers, and required
-                    software.
+                    Troubleshoots hardware and software (Windows OS, drivers,
+                    applications, and peripherals).
                   </li>
-                  <li>troubleshooting and fixing problems on the computer</li>
+                  <li>
+                    Performs operating system reinstallation, software
+                    configuration, and device performance optimization.
+                  </li>
+                  <li>Assembles and upgrades PCs according to user needs.</li>
+                  <li>
+                    Ensures all devices are functioning stably and ready for
+                    use.
+                  </li>
                 </ul>
               </motion.div>
 
@@ -504,15 +512,13 @@ function App() {
               >
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
                   <div>
-                    <h3 className="font-semibold">
-                      Software Engineer – Internship
-                    </h3>
+                    <h3 className="font-semibold">IT Support – Intern</h3>
                     <p className="text-muted-foreground text-sm">
                       Yayasan Indonesia Sejahtera Amanah
                     </p>
                   </div>
                   <span className="text-sm text-muted-foreground mt-2 md:mt-0">
-                    Feb 2024 – Jul 2024
+                    Feb 2025 – Apr 2024
                   </span>
                 </div>
 
@@ -521,20 +527,16 @@ function App() {
                 </h4>
                 <ul className="list-disc list-inside space-y-1 text-muted-foreground">
                   <li>
-                    Coordinated with the technical team to align UI
-                    implementation with application requirements
+                    Identify and resolve network, server, and computer system
+                    issues.
                   </li>
                   <li>
-                    Contributed to building application user interfaces using
-                    modern front-end practices
+                    Perform technical troubleshooting and system repairs to
+                    ensure smooth operations.
                   </li>
                   <li>
-                    Implemented responsive layout adjustments for various screen
-                    sizes and devices
-                  </li>
-                  <li>
-                    Developed and handled user input processing logic to ensure
-                    smooth user interactions
+                    Perform system repairs and adjustments based on internal
+                    user needs.
                   </li>
                 </ul>
               </motion.div>
