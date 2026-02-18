@@ -222,8 +222,8 @@ function App() {
                 <button
                   onClick={() => {
                     const link = document.createElement("a");
-                    link.href = "/cv/CV_Riyan Ananda P_IT.pdf";
-                    link.download = "CV_Riyan Ananda P_IT.pdf";
+                    link.href = "/cv/CV_Riyan-Ananda-P-EN.pdf";
+                    link.download = "CV_Riyan-Ananda-P-EN.pdf";
                     link.click();
                   }}
                   className="px-4 py-1 rounded-sm border font-semibold transition text-sm
